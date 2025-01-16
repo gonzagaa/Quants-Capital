@@ -1,0 +1,13 @@
+#home.black {
+    background: #000302;
+}
+
+#home.black .content p {
+    color: #fff;
+}
+
+#home.black .content h1 {
+    background: linear-gradient(155deg, #ecfff6 50%, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

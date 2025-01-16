@@ -1,0 +1,293 @@
+#tabelas {
+    overflow: hidden;
+    position: relative;
+
+    background: #000000be;
+}
+
+#tabelas img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    opacity: .6;
+}
+
+#tabelas .tabelas {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#tabelas .tabela {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    backdrop-filter: blur(16px) saturate(123%);
+    -webkit-backdrop-filter: blur(16px) saturate(123%);
+    background-color: rgba(33, 33, 33, 0.237);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+#tabelas .tabela img.joia {
+    width: 4rem;
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    border-radius: 50%;
+    z-index: 2;
+    transform: rotate(180deg);
+    background: #ff4d4d98;
+    padding: .8rem;
+}
+
+#tabelas .tabela.quants img.joia {
+    transform: rotate(-10deg);
+    left: initial;
+    right: -1rem;
+    background: #ffffff90;
+}
+
+#tabelas .tabela h3 {
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+    padding: 2rem;
+    width: 100%;
+    backdrop-filter: blur(6px) saturate(123%);
+    -webkit-backdrop-filter: blur(6px) saturate(123%);
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+#tabelas .tabela .topics {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+
+    text-align: left;
+}
+
+#tabelas .tabela .topics p {
+    font-size: 1.4rem;
+    color: #fcfcfc;
+    width: 100%;
+}
+
+#tabelas .tabela .topics .topic {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+
+    position: relative;
+}
+
+#tabelas .tabela .topics .topic::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: linear-gradient(to right, #ffffffa0, transparent);
+}
+
+#tabelas .tabela .topic:nth-child(3)::before {
+    display: none;
+}
+
+#tabelas .tabela .topic span.emoji {
+    font-size: 1.8rem;
+    background: #ff0b0b3c;
+    padding: .3rem;
+    padding-inline: .5rem;
+    border-radius: .5rem;
+}
+
+#tabelas .tabela.quants h3 {
+    background: var(--gradient);
+    color: #ffffff;
+}
+
+#tabelas .tabela.quants h3 span {
+    color: #fff;
+}
+
+#tabelas .tabela.quants .topic span.emoji {
+    background: #00b661a4;
+}
+
+#tabelas .tabela .topic p span {
+    font-weight: 600;
+}
+
+#tabelas a button {
+    background: linear-gradient(to right, #fff 70%, #ceffe8  100%);
+    color: #00150b; 
+    font-weight: 500;
+
+    margin-top: 3rem;
+}
+
+#tabelas a button:hover {
+    box-shadow: 0 20px 30px #5d5d5d18;
+}
+
+#tabelas a button ion-icon {
+    background: linear-gradient(5deg, #002f19c8 0%, #003e21d3 100%);
+    color: #fff;
+}
+
+.custom-shape-divider-top-1736976335 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 10;
+}
+
+.custom-shape-divider-top-1736976335 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 20px;
+}
+
+.custom-shape-divider-top-1736976335 .shape-fill {
+    fill: var(--bg-green);
+}
+
+.custom-shape-divider-bottom-1736980111 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 10;
+}
+
+.custom-shape-divider-bottom-1736980111 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 20px;
+}
+
+.custom-shape-divider-bottom-1736980111 .shape-fill {
+    fill: var(--bg-green);
+}
+
+#tabelas .blush {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(#0088499f, transparent 50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: -120%;
+    opacity: 1;
+}
+
+#tabelas .blush.dois {
+    left: initial;
+    right: -120%;
+}
+
+@media (min-width: 1080px) {
+    section#tabelas {
+        background: linear-gradient(5deg, #004223 0%, #00582f 100%);
+    }
+
+    section#tabelas a button {
+        display: none;
+    }
+    
+    section#tabelas .tabelas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+    }  
+    
+    section#tabelas img.bg {
+        opacity: .8;
+    }
+
+    section#tabelas .tabela {
+        backdrop-filter: blur(16px) saturate(123%);
+        -webkit-backdrop-filter: blur(16px) saturate(123%);
+        background-color: rgba(28, 28, 28, 0.354);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.317);
+    }
+
+    section#tabelas .tabela.quants img.joia {
+        background: var(--gradient);
+    }
+
+    section#tabelas .tabela h3 {
+        font-size: 1.8rem;
+        backdrop-filter: blur(6px) saturate(123%);
+        -webkit-backdrop-filter: blur(6px) saturate(123%);
+        background-color: rgba(0, 0, 0, 0.383);
+    }
+
+    section#tabelas .tabela .topics {
+        gap: 5rem;
+        padding-block: 2.5rem;
+    }
+
+    section#tabelas .tabela .topics .topic {
+        align-items: center;
+    }
+
+    section#tabelas .tabela .topics .topic::before {
+        bottom: -2.5rem;
+    } 
+
+    section#tabelas .tabela .topic span.emoji {
+        font-size: 1.4rem;
+        background: #ff161673;
+        padding: .3rem;
+        padding-inline: .3rem;
+        padding-bottom: .4rem;
+        border-radius: .5rem;
+    }
+
+    section#tabelas .blush {
+        display: none;
+        width: 1000px;
+        height: 1000px;
+        background: radial-gradient(#00884849, transparent 50%);
+        z-index: 0;
+        top: -60%;
+        left: -30%;
+        opacity: 1;
+    }
+    
+    section#tabelas .blush.dois {
+        display: none;
+        left: initial;
+        right: -30%;
+        background: radial-gradient(#00c96b38, transparent 50%);
+    }
+}

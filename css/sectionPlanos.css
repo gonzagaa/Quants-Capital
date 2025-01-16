@@ -1,0 +1,258 @@
+#planos {
+    overflow: hidden;
+    position: relative;
+    /* background: linear-gradient(5deg, #005e32 0%, #007d43 100%); */
+    background: #005524da;
+
+}
+
+#planos .wrapper {
+    position: relative;
+    z-index: 3;
+} 
+
+#planos header span.span {
+    background: linear-gradient(100deg, #ffffff, #ccffe7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#planos header h2 {
+    font-size: 3.5rem;
+    width: 90%;
+    background: linear-gradient(100deg, #ffffff, #f6fffb);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#planos header p {
+    color: #Fff;
+}
+
+#planos header p span {
+    color: #Fff;
+}
+
+#planos img.graficos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .08;
+
+    mix-blend-mode: darken;
+    opacity: .8;
+}
+
+#planos .cards {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 7rem;
+}
+
+#planos .cards .card {
+    width: 100%;
+    position: relative;
+
+    padding: 1.5rem;
+    padding-top: 2.5rem;
+
+    backdrop-filter: blur(20px) saturate(50%);
+    -webkit-backdrop-filter: blur(20px) saturate(50%);
+    background: #f9fffdec;
+
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.284);
+}
+
+#planos .cards .card h3 {
+    font-size: 1.8rem;
+
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    top: -7%;
+    transform: translate(-50%, 0);
+
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.284);
+    background: #91919168;
+    border-radius: 12px;
+    padding-block: 1.5rem;
+
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+#planos .cards .card .topics {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    margin-block: 3rem;
+    gap: 3rem;
+}
+
+#planos .cards .card .topics p {
+    font-size: 1.6rem;
+    color: #000000db;
+    width: 100%;
+}
+
+#planos .cards .card .topics p span {
+    font-weight: 600;
+    color: #004821;
+}
+
+#planos .cards .card .topics .topic {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    align-items: start;
+    width: 100%;
+}
+
+#planos .cards .card .topics .topic ion-icon {
+    background: #0000001a;
+    color: #000000;
+    font-size: 1.8rem;
+    padding: .2rem;
+}
+
+#planos .cards .card .topics .topic::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #0000001c;
+}
+
+#planos .cards .card .price h5 {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#planos .cards .card .price h5 span {
+    font-size: 1.8rem;
+    display: block;
+}
+
+#planos .cards .card a button {
+
+}
+
+#planos .cards .card a button {
+    background: #002e1973;
+    color: #fff;
+    font-weight: 500;
+} 
+
+#planos .cards .card a button:hover {
+    background: #02020291;
+    box-shadow: 0 20px 30px #00000029;
+}
+
+#planos .cards .card.recomendado {
+    background: #f9fffdec;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.606);
+}
+
+#planos .cards .card.recomendado h3 {
+    background: #8b8b8b76;
+}
+
+#planos .cards .card.recomendado a button {
+    background: var(--gradient);
+}
+
+#planos .bglateral {
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    section#planos {
+        /* background: #00000096; */
+        background: linear-gradient(5deg, #003b1f 0%, #004324 100%);
+    }
+    section#planos img.graficos {
+        opacity: .15;
+        z-index: 0;
+        filter: blur(2px);
+    }
+
+    section#planos header h2 {
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    section#planos .cards {
+        margin-top: 9rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+    }
+
+    section#planos .cards .card h3 {
+        top: -7%;
+        background: linear-gradient(5deg, #00b661af 0%, #007e43df 100%);
+    }
+
+    section#planos .cards .card.recomendado h3 {
+        background: linear-gradient(5deg, #00b661af 0%, #007e43df 100%);
+    }
+
+    section#planos .cards .card {
+        background: #f9fffdc0;
+    }
+
+    section#planos .cards .card.recomendado {
+        transform: scale(1.06);
+    }
+
+    section#planos .cards .card a button {
+        width: 100%;
+    }
+
+    section#planos .cards .card .price h5 span {
+        display: initial;
+        font-size: 2.5rem;
+        margin-right: -.5rem;
+    }
+
+    section#planos .bglateral {
+        display: inherit;
+        position: absolute;
+        width: 35%;
+        top: 1%;
+        mix-blend-mode: overlay;
+        opacity: .7;
+    }
+
+    section#planos .bglateral.left {
+        left: -5%;
+        mask-image: linear-gradient(to right, #000, transparent);
+    }
+
+    section#planos .bglateral.right {
+        width: 41%;
+        top: -5%;
+        right: -11%;
+        mask-image: linear-gradient(to left, #000, transparent);
+    }
+}
