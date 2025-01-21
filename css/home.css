@@ -52,7 +52,7 @@
 }
 
 #home .text {
-  margin-top: 90%;
+  margin-top: 94%;
   position: relative;
   z-index: 4;
 }
@@ -64,6 +64,10 @@
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#home img.logo {
+  width: 10rem;
 }
 
 #home h1 {
@@ -296,6 +300,10 @@ header#home .result p span {
 
     border-radius: 0;
     box-shadow: initial;
+  }
+
+  header#home img.logo {
+    width: 17rem;
   }
 
   header#home img.graficos {
