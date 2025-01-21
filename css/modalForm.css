@@ -51,7 +51,7 @@
     cursor: pointer;
 }
 
-.modal form {
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b .modal form {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -59,14 +59,19 @@
     width: 100%;
 }
 
-.modal form label {
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b #rd-column-m66rvitg > div {
+    background-color: #fff;
+    padding: 0 !important;
+}
+
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b .modal form label {
     color: var(--secondary-color);
     font-size: 1.4rem;
     margin-bottom: .5rem;
     font-weight: 700;
 }
 
-.modal form input {
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b .modal form input {
     width: 100%;
     font-size: 1.6rem;
     padding: 1rem;
@@ -75,17 +80,22 @@
     border-radius: 1rem;
 }
 
-.modal form input::placeholder {
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b .modal form input::placeholder {
     opacity: .6;
 }
 
-.modal form input:focus {
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b .modal form input:focus {
     border: 1px solid #0d8400;
     outline: none;
 }
 
 .modal form button {
     margin-top: 3rem;
+}
+
+body #form-quants-prepopulado-6fafab484f5fa0d4b38b {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 @media (min-width: 1080px) {
@@ -96,7 +106,7 @@
     }
 
     .modal header h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .modal form button {

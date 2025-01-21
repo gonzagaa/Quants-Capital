@@ -57,9 +57,37 @@
     border-radius: .5rem;
 
     margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+#robos .cards .card .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#robos .cards .card .buttons .topic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+#robos .cards .card .buttons .topic h4 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+#robos .cards .card .buttons .topic h5 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: -2rem;
 }
 
 #robos .cards .card a button {
+    margin-top: 2rem;
     background: linear-gradient(to right, #fff, #c8c8c8);
     color: #003b20;
     font-weight: 600;
@@ -255,6 +283,9 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
         background: linear-gradient(to right, #003b1f 70%, #009d69 100%);
     }
 
+    body section#robos .cards .card .text img.icon {
+    }
+
     section#robos .cards .card:nth-child(even) {
         background: linear-gradient(to left, #003b1f 70%, #009d69 100%);
     }
@@ -304,7 +335,7 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     } 
 
     section#robos .cards .card a button {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding-block: 1rem;
     }
 
@@ -317,6 +348,34 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     section#robos .swiper-button-next,
     section#robos .swiper-pagination {
         display: none;
+    }
+
+    section#robos .cards .card .buttons a button {
+        margin-top: 0;
+    }
+
+    section#robos .cards .card .buttons {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    section#robos .cards .card:nth-child(3) .buttons,
+    section#robos .cards .card:nth-child(5) .buttons {
+        flex-direction: row-reverse;
+    }
+
+    section#robos .cards .card .buttons .topic {
+        text-align: left;
+    }
+
+    section#robos .cards .card .buttons .topic h4 {
+        font-size: 1rem;
+    }
+
+    section#robos .cards .card .buttons .topic h5 {
+        font-size: 3rem;
     }
 }
 
