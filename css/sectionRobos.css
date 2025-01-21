@@ -229,12 +229,12 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     }
 
     section#robos .cards .card:nth-child(2),
-    section#robos .cards .card:nth-child(8) {
+    section#robos .cards .card:nth-child(6) {
         transform: translateX(50px);
     }
     
     section#robos .cards .card:nth-child(3),
-    section#robos .cards .card:nth-child(9) {
+    section#robos .cards .card:nth-child(7) {
         transform: translateX(-50px);
     }
     
@@ -362,7 +362,8 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     }
 
     section#robos .cards .card:nth-child(3) .buttons,
-    section#robos .cards .card:nth-child(5) .buttons {
+    section#robos .cards .card:nth-child(5) .buttons,
+    section#robos .cards .card:nth-child(7) .buttons {
         flex-direction: row-reverse;
     }
 
