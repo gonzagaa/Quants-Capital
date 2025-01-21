@@ -1,5 +1,6 @@
 @import './global.css';
-@import './home.css?v=2';
+@import './headerHome.css';
+@import './home.css';
 @import './homeBlack.css';
 @import './sectionInicio.css';
 @import './sectionTabelas.css';
