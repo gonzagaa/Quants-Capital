@@ -50,13 +50,15 @@
     justify-content: space-between;
 }
 
+#robos .cards .card .text .image {
+    background: #ffffff21;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
 #robos .cards .card img.icon {
     width: 5rem;
-    background: #ffffff21;
-    padding: 1rem;
-    border-radius: .5rem;
-
-    margin-bottom: 2rem;
     object-fit: cover;
 }
 
@@ -284,6 +286,7 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     }
 
     body section#robos .cards .card .text img.icon {
+        
     }
 
     section#robos .cards .card:nth-child(even) {
@@ -310,7 +313,16 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
         grid-template-areas: "a b";
     }
 
-    section#robos .cards .card:nth-child(even) .text img.icon {
+    body section#robos .wrapper .cards .card .text .image {
+        height: 100%;
+        padding: .5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section#robos .cards .card:nth-child(even) .text .image {
         grid-area: b;
     }
 
@@ -320,10 +332,9 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
     
     section#robos .cards .card .text img.icon {
         border-radius: 1.5rem;
-        width: 100%;
-        height: 100%;
+        width: 4rem;
+        height: 4rem;
         object-fit: cover;
-        padding: 3rem;
     }
 
     section#robos .cards .card .text h3 {
