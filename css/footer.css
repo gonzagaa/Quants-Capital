@@ -1,0 +1,22 @@
+footer {
+    padding: 2rem;
+    padding-block: 3rem;
+    background: var(--bg-green);
+}
+
+footer h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer p {
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}

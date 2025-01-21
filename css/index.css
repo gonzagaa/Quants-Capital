@@ -5,6 +5,12 @@
 @import './sectionTabelas.css';
 @import './sectionComece.css';
 @import './sectionPlanos.css';
+@import './sectionRobos.css';
+@import './sectionSobre.css';
+@import './footer.css';
+
+@import './navigation.css';
+@import './modalForm.css';
 
 @import './button.css';
 @import './head.css';

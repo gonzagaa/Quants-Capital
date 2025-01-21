@@ -3,7 +3,7 @@ a {
     text-decoration: none;
 }
 
-a button {
+button {
     width: 100%;
     padding: 1.5rem 3rem;
     font-size: 1.6rem;
@@ -18,20 +18,20 @@ a button {
     position: relative;
 }
 
-a button.icon {
+button.icon {
     padding-right: 5rem;
     border-radius: 4rem;
 }
 
-a button.icon:hover {
+button.icon:hover {
     padding-right: 8rem;
 }
 
-a button.icon:hover ion-icon {
+button.icon:hover ion-icon {
     box-shadow: 0 20px 30px #5d5d5d41;
 }
-
-a button.icon ion-icon {
+ 
+button.icon ion-icon {
     position: absolute;
     top: 50%;
     right: 1rem;
@@ -44,7 +44,7 @@ a button.icon ion-icon {
     transition: all 300ms ease-in-out;
 }
   
-a button:hover {
+button:hover {
     filter: brightness(1.1);
     cursor: pointer;
     box-shadow: 0 20px 30px #5d5d5d41;
@@ -55,13 +55,13 @@ a button:hover {
         width: initial;
     }
 
-    a button {
+    button {
         font-size: 2rem;
         width: initial;
         padding: 1.7rem 4.5rem;
     }
 
-    a button.icon {
+    button.icon {
         padding-right: 7rem;
     }
 }

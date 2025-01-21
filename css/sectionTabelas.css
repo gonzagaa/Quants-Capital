@@ -2,7 +2,8 @@
     overflow: hidden;
     position: relative;
 
-    background: #000000be;
+    background: linear-gradient(5deg, #004223 0%, #00582f 100%);
+
 }
 
 #tabelas img.bg {

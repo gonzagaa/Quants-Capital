@@ -24,8 +24,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body id="body" class="smooth-scroll-wrapper">    
+    <nav id="navigation">
+        <div class="wrapper">
+            <div class="content">
+                <img class="logo" src="./assets/LOGO BRANCA QUANTS.png" alt="">
+
+                <a href="#planos"><button>COMECE AGORA</button></a>
+            </div>
+        </div>
+    </nav>
+
     <header class="header" id="home">
         <img class="graficos" src="./assets/graficos quants.jpg" alt="">
         <div class="blush um"></div>
@@ -34,11 +46,15 @@
         <div class="wrapper">
            <div class="content">
               <div class="text">
-                    <span class="span">QUANTS CAPITAL</span>
-                    <h1>Sua plataforma automatizada para investimentos de<span> alto potencial</span>.</h1>
-                    <p>Transforme <span>risco em resultados</span> e tenha rendimentos até <span>25x mais</span> que a taxa selic</p>
-                    <div class="buttons">
-                        <a href="#"><button class="icon">VER COMO <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                    <span data-aos="fade-up-right" class="span">QUANTS CAPITAL</span>
+                    <h1 data-aos="fade-up-right">Sua plataforma automatizada para investimentos de<span> alto potencial</span>.</h1>
+                    <p data-aos="fade-up-right">Transforme <span>risco em resultados</span> e tenha rendimentos até <span>25x mais</span> que a taxa selic</p>
+                    <div data-aos="fade-up-right" class="buttons">
+                        <a href="#planos"><button class="icon">VER COMO <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                    </div>
+                    <div data-aos="fade-up" class="depoimentos">
+                        <img src="./assets/depoimentos.png" alt="" />
+                        <p>+5 mil assinaturas</p>
                     </div>
               </div>
             </div>
@@ -47,7 +63,7 @@
                 <div class="retangulo"></div>
                 <div class="retangulo dois"></div>
                 <img class="desktop" src="./assets/homem com fundo.png" alt="">
-                <img class="desktop semfundo" src="./assets/homem sem fundo.png" alt="">
+                <img  class="desktop semfundo" src="./assets/homem sem fundo.png" alt="">
                 <img class="mobile" src="./assets/homem com fundo MOBILE.png" alt="">
                 <img class="mobile semfundo" src="./assets/homem sem fundo mobile.png" alt="">
 
@@ -83,7 +99,7 @@
         <div class="wrapper">
             <div class="content">
                 <div class="text">
-                    <header>
+                    <header data-aos="fade-up">
                         <span class="span">100% AUTOMATIZADO</span>
                         <h2>Como você vai ver seu dinheiro rendendo com a <span>Quants</span>?</h2>
                         <p>A Quants Capital é uma empresa que trabalha com operações automatizadas. Mas, <span>você nunca viu</span> um modelo como o nosso <span>até hoje</span>.</p>
@@ -93,11 +109,11 @@
 
                     <div class="cards">
                         <img class="graficos" src="./assets/graficos quants.jpg" alt="">
-                        <div class="card">
+                        <div data-aos="fade-up" class="card">
                             <p><span>Temos robôs inteligentes e 100% automatizados.</span> Eles analisam os movimentos do mercado e fazem operações na Bolsa de valores em tempo real. </p>
                         </div>
 
-                        <div class="card">
+                        <div data-aos="fade-up" class="card">
                             <p><span>Você não ficará preso a uma única estratégia.</span> Nossa estrutura disponibiliza robôs de diversas estratégias. Assim, você pode se adaptar aos diversos cenários do mercado. 
                             </p>
                         </div>
@@ -119,7 +135,7 @@
                 <div class="tabelas">
                     <img class="bg" src="./assets/graficos quants.jpg" alt="">
         
-                    <div class="tabela">
+                    <div data-aos="fade-up-right" class="tabela">
                         <img class="joia" src="./assets/joiia.png" alt="">
                         <h3>Maneiras Tradicionais de Operações Automatizadas</h3>
         
@@ -139,7 +155,7 @@
                         </div>
                     </div>
         
-                    <div class="tabela quants">
+                    <div data-aos="fade-up-left" class="tabela quants">
                         <img class="joia" src="./assets/joiia.png" alt="">
                         <h3>O jeito <span>Quants</span> de automatizar</h3>
         
@@ -160,7 +176,7 @@
                     </div>
                 </div>
 
-                <a href="#"><button class="icon">VER PLANOS <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                <a href="#planos"><button class="icon">VER PLANOS <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
             </div>
         </div>
 
@@ -177,13 +193,14 @@
     <section id="comece">    
         <div class="wrapper">
             <div class="content">
-                <header>
+                <header data-aos="fade-up">
                     <span class="span">INVESTIMENTO SIMPLIFICADO</span>
                     <h2>Comece a investir com poucos cliques e de forma simples</h2>
                 </header>
 
                 <div class="cards">
-                    <div class="card">
+                    <div class="card" data-aos="fade-left"
+                                data-aos-duration="1000">
                         <div class="number">
                             <h3>1</h3>
                         </div>
@@ -197,7 +214,8 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-left"
+                    data-aos-duration="1500">
                         <div class="number">
                             <h3>2</h3>
                         </div>
@@ -208,7 +226,8 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="fade-left"
+                    data-aos-duration="2000">
                         <div class="number">
                             <h3>3</h3>
                         </div>
@@ -233,16 +252,16 @@
 
         <div class="wrapper">
             <div class="content">
-                <header>
+                <header data-aos="fade-up">
                     <span class="span">COMECE AGORA</span>
                     <h2>Escolha seu <span>plano ideal</span></h2>
                     <p>O capital necessário para cada contrato é de <span>R$500,00</span></p>
                 </header>
 
                 <div class="cards">
-                    <div class="card">
+                    <div data-aos="fade-up" class="card">
                         <h3>LITE</h3>
-
+                        <h4>Veja os <span>benefícios</span> do Lite</h4>
                         <div class="topics">
                             <div class="topic">
                                 <ion-icon name="checkmark-outline"></ion-icon>
@@ -262,11 +281,12 @@
                             <h5>GRÁTIS</h5>
                         </div>
 
-                        <a href="#"><button>ADQUIRIR</button></a>
+                        <a><button class="openModalForm">ADQUIRIR</button></a>
                     </div>
 
-                    <div class="card recomendado">
+                    <div data-aos="fade-up" class="card recomendado">
                         <h3>PLUS</h3>
+                        <h4>Veja os <span>benefícios</span> do Plus</h4>
 
                         <div class="topics">
                             <div class="topic">
@@ -284,14 +304,16 @@
                         </div>
 
                         <div class="price">
-                            <h5><span>12x de</span> R$249,70</h5>
+                            <span class="x">12x de</span> 
+                            <h5><span>R$</span>249<span>,70</span></h5>
                         </div>
 
-                        <a href="#"><button>ADQUIRIR</button></a>
+                        <a><button class="openModalForm">ADQUIRIR</button></a>
                     </div>
 
-                    <div class="card">
+                    <div data-aos="fade-up" class="card">
                         <h3>PERSON</h3>
+                        <h4>Veja os <span>benefícios</span> do Person</h4>
 
                         <div class="topics">
                             <div class="topic">
@@ -309,20 +331,221 @@
                         </div>
 
                         <div class="price">
-                            <h5><span>12x de</span> R$599,70</h5>
+                            <span class="x">12x de</span> 
+                            <h5><span>R$</span>599<span>,70</span></h5>
                         </div>
 
-                        <a href="#"><button>ADQUIRIR</button></a>
+                        <a><button class="openModalForm">ADQUIRIR</button></a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="custom-shape-divider-bottom-1736980111">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
         <img class="bglateral right" src="./assets/homem quants.png" alt="">
         <img class="bglateral left" src="./assets/mulher quants.png" alt="">
     </section>
 
+    <section id="robos">
+        <div class="wrapper">
+            <div class="content">
+                <header data-aos="fade-up">
+                    <span class="span">AUTOMAÇÕES</span>
+                    <h2>Conheça nossas automações</h2>
+                </header>
+
+                <div class="swiper mySwiper4">
+                    <div class="cards swiper-wrapper">
+                        <div class="efeito">
+                            <header>
+                                <span class="span">AUTOMAÇÕES</span>
+                                <h2>Conheça nossas automações</h2>
+                            </header>
+                            <span class="linha um"></span>
+                            <span class="linha dois"></span>
+                            <span class="linha tres"></span>
+                        </div>
+
+                        <div class="card swiper-slide" data-aos="fade-right">
+                            <img class="bg" src="./assets/capasrobos/1.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>ARES</h3>
+                                    <p>Um combo perfeito entre Fluxo e Análise Técnica. O Ares é capaz de operar a favor e contra a tendência, com Média Móvel e Pivot Point. Ele consegue proteger suas operações por trabalhar com trailing stop.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card swiper-slide" data-aos="fade-left">
+                            <img class="bg" src="./assets/capasrobos/2.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>ALASKA SQUARE II</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.consectetur adipisicing elit. Aliquid tenetur.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="card swiper-slide" data-aos="fade-right">
+                            <img class="bg" src="./assets/capasrobos/3.png" alt="">
+                        <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>ARTEMIS</h3>
+                                    <p>Ideal se você está procurando por segurança e consistência. O Artemis sempre opera a favor da tendência, através de médias móveis, padrões gráficos e análise de fluxo. 
+                                    </p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                        </div>
+                        </div>
+
+                        <div class="card swiper-slide" data-aos="fade-left">
+                            <img class="bg" src="./assets/capasrobos/4.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>ADAMS</h3>
+                                    <p>Foi desenvolvido para operar com preço médio em regiões de exaustão, utilizando os setups mais lucrativos de Fabrício Gonçalves: 0800, 1200, 1800, Alaska e Square.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card swiper-slide" data-aos="fade-right">
+                            <img class="bg" src="./assets/capasrobos/5.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>FALCON</h3>
+                                    <p>Se você é um investidor corajoso, encontrou seu robô ideal. Na maioria das vezes, opera contra a tendência do mercado, utilizando a agressividade de grandes players e se aproveitando delas.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="card swiper-slide" data-aos="fade-left">
+                            <img class="bg" src="./assets/capasrobos/6.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>QUANTS</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.consectetur adipisicing elit. Aliquid tenetur.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card swiper-slide" data-aos="fade-right">
+                            <img class="bg" src="./assets/capasrobos/7.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>PEGASUS</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.consectetur adipisicing elit. Aliquid tenetur.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card swiper-slide" data-aos="fade-left">
+                            <img class="bg" src="./assets/capasrobos/8.png" alt="">
+                            <div class="text">
+                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <div class="text-box">
+                                    <h3>ZEUS</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.consectetur adipisicing elit. Aliquid tenetur.</p>
+                                    <a href="#"><button>VEJA O DESEMPENHO</button></a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <a href="#planos"><button class="icon">COMEÇAR A INVESTIR <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+            </div>
+        </div>      
+    </section>
+
+    <section id="sobre">
+        <div class="custom-shape-divider-top-1736976335">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <img class="bg" src="./assets/graficos quants.jpg" alt="">
+
+        <div class="wrapper">
+            <div class="content">
+                <header data-aos="fade-up">
+                    <img class="logo" src="./assets/LOGO BRANCA QUANTS VERTICAL.png" alt="">
+                    <h2 class="span">SOBRE</h2>
+                    <p>A <span>Quants Capital</span> é uma empresa de automação de investimentos, criada por <span>Fabrício Gonçalvez</span>, investidor e trader há 18 anos, parceiro de grandes empresas como <span>BTG Pactual e Nelógica</span>. 
+                    A nossa solução é fazer o seu <span>dinheiro render como você merece</span>, enquanto você aproveita o que é <span>realmente importante</span>. 
+                    </p>
+                </header>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="content">
+                <p>Todos direitos reservados © 2024 Quants Capital</p>
+                <h2>Investimentos passados não são garantia de resultados futuros.</h2>  
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <header>
+                <span class="span">FINALIZE SUA COMPRA</span>
+                <h2>Para finalizar a sua compra, insira os seguintes dados:</h2>
+            </header>
+
+            <form action="/submit" method="POST">
+                <label for="name">Nome:</label>
+                <input placeholder="Digite seu nome" type="text" id="name" name="name" required>
+                <br><br>
+                
+                <label for="email">E-mail:</label>
+                <input placeholder="Digite seu email" type="email" id="email" name="email" required>
+                <br><br>
+                
+                <label for="phone">Número de Telefone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="Digite seu número" required>
+                
+                <button type="submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+         {
+          duration: 1500,
+         }
+        );
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./script.js"></script>
