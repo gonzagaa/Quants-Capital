@@ -1,11 +1,11 @@
 @import './global.css';
-@import './home.css';
+@import './home.css?v=2';
 @import './homeBlack.css';
 @import './sectionInicio.css';
 @import './sectionTabelas.css';
 @import './sectionComece.css';
-@import './sectionPlanos.css';
-@import './sectionRobos.css';
+@import './sectionPlanos.css?v=2';
+@import './sectionRobos.css?v=2';
 @import './sectionSobre.css';
 @import './footer.css';
 
