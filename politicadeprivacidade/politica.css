@@ -1,0 +1,50 @@
+@import '../global.css';
+
+#politica {
+    background: var(--bg-green);
+    text-align: left;
+}
+
+#politica header a {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+
+    transition: all 200ms ease-in-out;
+}
+
+#politica header a:hover {
+    color: var(--primary-color);
+}
+
+#politica header h2 {
+    margin-bottom: 3rem;
+}
+
+#politica p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+#politica h3 {
+    font-size: 1.6rem;
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+
+    margin-top: 2rem;
+} 
+
+#politica ul {
+    list-style-type: circle;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
