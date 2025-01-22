@@ -1,0 +1,52 @@
+#home.v2 {
+  height: 105vh;
+}
+
+#home h1.v2{
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 2rem;
+  
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home p.v2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #292929;
+}
+
+@media (min-width: 1080px) {
+    header#home.v2 {
+        height: 90vh;
+    }
+    
+    header#home .content h1.v2 {
+        font-size: 3.5rem;
+        line-height: 1;
+    
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    
+    header#home .content p.v2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1700px) {
+    header#home .content h1.v2 {
+      font-size: 4.5rem;
+    }
+  
+    header#home .content p.v2 {
+      font-size: 1.8rem;
+    }
+
+}
