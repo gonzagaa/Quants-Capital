@@ -71,38 +71,43 @@ modalOverlay.addEventListener('click', (event) => {
 
 // Usar MutationObserver para detectar quando o botão for renderizado
 const observer = new MutationObserver((mutationsList, observer) => {
-    const formButton = document.getElementById('rd-button-m66rvitk');
+  const formButton = document.getElementById('rd-button-m66rvitk'); // Substitua pelo ID correto
 
-    if (formButton) {
-        // Botão encontrado, adicionar o evento de clique
-        formButton.addEventListener('click', () => {
-            let checkoutLink;
+  if (formButton) {
+      // Adicionar a classe "link4Selet"
+      formButton.classList.add('link4Selet');
+      console.log('Classe "link4Selet" adicionada ao botão!');
 
-            // Define o link do checkout com base no plano
-            if (currentPlan === 'lite') {
-                checkoutLink = 'https://app.4selet.com.br/checkout/d68c9ea4-77bd-4a6b-bc4d-f14eecf1e8b3';
-            } else if (currentPlan === 'plus') {
-                checkoutLink = 'https://app.4selet.com.br/checkout/b9df07e0-02f3-424a-b391-239dc7f94d62';
-            } else if (currentPlan === 'person') {
-                checkoutLink = 'https://app.4selet.com.br/checkout/6ba34969-df8d-4e98-a054-426bf3898eb4';
-            }
+      // Adicionar o evento de clique para redirecionamento
+      formButton.addEventListener('click', () => {
+          let checkoutLink;
 
-            // Redireciona para o link do checkout
-            if (checkoutLink) {
-                window.location.href = checkoutLink;
-            }
-        });
+          // Define o link do checkout com base no plano
+          if (currentPlan === 'lite') {
+              checkoutLink = 'https://app.4selet.com.br/checkout/d68c9ea4-77bd-4a6b-bc4d-f14eecf1e8b3';
+          } else if (currentPlan === 'plus') {
+              checkoutLink = 'https://app.4selet.com.br/checkout/b9df07e0-02f3-424a-b391-239dc7f94d62';
+          } else if (currentPlan === 'person') {
+              checkoutLink = 'https://app.4selet.com.br/checkout/6ba34969-df8d-4e98-a054-426bf3898eb4';
+          }
 
-        // Parar de observar após encontrar o botão
-        observer.disconnect();
-        console.log('Botão do formulário encontrado e evento adicionado!');
-    }
+          // Redireciona para o link do checkout
+          if (checkoutLink) {
+              window.location.href = checkoutLink;
+          }
+      });
+
+      // Parar de observar após encontrar o botão
+      observer.disconnect();
+      console.log('Botão do formulário encontrado, classe adicionada e evento configurado!');
+  }
 });
 
 // Configurar o observer para monitorar o documento
 observer.observe(document.body, {
-    childList: true,
-    subtree: true,
+  childList: true,
+  subtree: true,
 });
+
 
 
