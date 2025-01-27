@@ -5,6 +5,13 @@ footer {
     background: var(--bg-green);
 }
 
+footer .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 footer p {
     color: #000000;
     margin-bottom: 1rem;
@@ -15,7 +22,7 @@ footer p {
 footer h2 {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.1;
     background: linear-gradient(155deg, #000, #00ae5d);
@@ -42,4 +49,9 @@ footer a:hover {
         padding-bottom: 3rem;
     }
 
+    footer h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 70%;
+    }
 }
