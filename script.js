@@ -109,5 +109,64 @@ observer.observe(document.body, {
   subtree: true,
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Seletores exclusivos para o modal do robô
+  const modalOverlayRobo = document.getElementById("modalOverlayRobo");
+  const modalRobo = document.getElementById("modalRobo");
+  const closeModalButtonRobo = document.getElementById("closeModalRobo");
+
+  const modalTitle = document.getElementById("modalTitle");
+  const maxLoss = document.getElementById("maxLoss");
+  const taxaAssertividade = document.getElementById("taxaAssertividade");
+  const fatorLucro = document.getElementById("fatorLucro");
+  const obs = document.getElementById("obs");
+
+  // Botões para abrir o modal do robô
+  const openModalButtonsRobo = document.querySelectorAll(".openModalRobo");
+
+  // Carrega o JSON e adiciona eventos aos botões
+  fetch("../../robos.json")
+    .then((response) => response.json())
+    .then((data) => {
+      openModalButtonsRobo.forEach((button) => {
+        button.addEventListener("click", () => {
+          const roboId = button.getAttribute("data-id");
+          const robo = data.find((item) => item.id === roboId);
+
+          if (robo) {
+            // Preenche os dados do modal
+            modalTitle.textContent = robo.nome;
+            maxLoss.textContent = robo.maximoLossDiario;
+            taxaAssertividade.textContent = robo.taxaAssertividade;
+            fatorLucro.textContent = robo.fatorLucro;
+            obs.textContent = robo.obs;
+
+            // Abre o modal do robô
+            modalOverlayRobo.style.display = "flex";
+            setTimeout(() => {
+              modalRobo.classList.add("open");
+            }, 10);
+          }
+        });
+      });
+    })
+    .catch((error) => console.error("Erro ao carregar o JSON:", error));
+
+  // Fecha o modal ao clicar no botão de fechar ou na overlay
+  closeModalButtonRobo.addEventListener("click", closeModalRobo);
+  modalOverlayRobo.addEventListener("click", (e) => {
+    if (e.target === modalOverlayRobo) closeModalRobo();
+  });
+
+  // Função para fechar o modal do robô
+  function closeModalRobo() {
+    modalRobo.classList.remove("open");
+    setTimeout(() => {
+      modalOverlayRobo.style.display = "none";
+    }, 300);
+  }
+});
+
+
 
 

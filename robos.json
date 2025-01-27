@@ -1,0 +1,51 @@
+[
+    {
+      "id": "ares",
+      "nome": "Ares",
+      "maximoLossDiario": "R$ 40,00",
+      "taxaAssertividade": "73%",
+      "fatorLucro": "1,47",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    },
+    {
+      "id": "adams",
+      "nome": "Adams",
+      "maximoLossDiario": "R$ 65,00",
+      "taxaAssertividade": "66%",
+      "fatorLucro": "1,17",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    },
+    {
+      "id": "artemis",
+      "nome": "Artemis",
+      "maximoLossDiario": "R$ 65,00",
+      "taxaAssertividade": "61%",
+      "fatorLucro": "1,94",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    },
+    {
+      "id": "falcon",
+      "nome": "Falcon",
+      "maximoLossDiario": "R$ 65,00",
+      "taxaAssertividade": "64%",
+      "fatorLucro": "1,08",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    },
+    {
+      "id": "pegasus",
+      "nome": "Pegasus",
+      "maximoLossDiario": "R$ 65,00",
+      "taxaAssertividade": "73%",
+      "fatorLucro": "1,11",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    },
+    {
+      "id": "alaska",
+      "nome": "Alaska/Square",
+      "maximoLossDiario": "R$ 125,00",
+      "taxaAssertividade": "86%",
+      "fatorLucro": "1,72",
+      "obs": "Obs: no plano Quants Plus a estratégia trabalha com blocos de 1 à 8 / 2 à 16 / 5 à 40 / 10 à 80 contratos. Para ver a distribuição de contratos do Quants Person, fale com nosso time."
+    }
+  ]
+  

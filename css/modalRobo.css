@@ -1,0 +1,123 @@
+.modalRobo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+  
+.modalRobo {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+  
+.modalRobo.open {
+    transform: translateY(0);
+    opacity: 1;
+}
+  
+.modalRobo button.closeModalRobo {
+    position: absolute;
+    top: 0;
+    width: initial;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+
+    color: #000;
+    padding: 0;
+}
+
+.modalRobo button.closeModalRobo:hover {
+    transform: scale(1.05);
+    box-shadow: none;
+}
+  
+.modalRobo .cards {
+    margin-block: 3rem;
+
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.modalRobo .cards .card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #ececec;
+}
+
+.modalRobo .cards .card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.modalRobo .cards .card p {
+    margin-top: 1rem;
+    font-size: 3rem;
+
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.modalRobo .cards .card span {
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+}
+
+@media (min-width: 1080px) {
+    .modalRobo {
+        max-width: none;
+        width: 50%;
+    }
+
+    .modalRobo .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .modalRobo .cards .card {
+        height: 100%;
+    }
+
+    .modalRobo .cards .card span {
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .modalRobo .cards .card:nth-child(2) p,
+    .modalRobo .cards .card:nth-child(3) p {
+        font-size: 4rem;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    .modalRobo {
+        width: 40%;
+    }
+}
