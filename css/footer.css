@@ -15,7 +15,7 @@ footer p {
 footer h2 {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.1;
     background: linear-gradient(155deg, #000, #00ae5d);
@@ -41,4 +41,5 @@ footer a:hover {
     footer#footer {
         padding-bottom: 3rem;
     }
+
 }
