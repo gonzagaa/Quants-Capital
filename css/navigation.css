@@ -55,7 +55,7 @@
     }
 
     nav#navigation img.logo {
-        width: 15rem;
+        width: 13rem;
     }
 
     nav#navigation a button {
@@ -66,6 +66,12 @@
 
 @keyframes nav {
     0% {
+        display: none;
+        transform: translate(-50%, 2550%);
+    }
+
+    50% {
+        display: inherit;
         transform: translate(-50%, 2550%);
     }
 
@@ -76,6 +82,12 @@
 
 @keyframes navDesktop {
     0% {
+        display: none;
+        transform: translate(0, -500%);
+    }
+
+    50% {
+        display: inherit;
         transform: translate(0, -500%);
     }
 

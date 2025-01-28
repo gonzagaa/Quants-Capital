@@ -68,6 +68,7 @@
 
 #home img.logo {
   width: 10rem;
+  height: auto; 
 }
 
 #home h1 {
@@ -103,9 +104,11 @@
 
 #home .image img {
   width: 100%;
+  height: auto; 
 }
 
 #home .image img.mobile {
+  height: auto; 
   position: absolute;
   top: 28%;
   left: 50%;
@@ -118,8 +121,7 @@
 
 header#home .image img.mobile.semfundo {
   z-index: 2;
-
-  /* animation: img infinite ease-in-out 10s; */
+  height: auto; 
 }
 
 #home .retangulo {
@@ -142,6 +144,7 @@ header#home .image img.mobile.semfundo {
 }
 
 #home img.graficos {
+  height: auto; 
   position: absolute;
   top: 0;
   left: 0;
@@ -182,6 +185,7 @@ header#home .image img.mobile.semfundo {
 
 #home .depoimentos img {
   width: 10rem;
+  height: auto; 
 }
 
 
@@ -303,10 +307,12 @@ header#home .result p span {
   }
 
   header#home img.logo {
-    width: 17rem;
+    height: auto; 
+    width: 13rem;
   }
 
   header#home img.graficos {
+    height: auto; 
     position: absolute;
     top: 0;
     left: 0;
@@ -340,6 +346,7 @@ header#home .result p span {
   }
 
   header#home .image img.desktop {
+    height: auto; 
     display: inherit;
     width: 50%;
     position: absolute;
@@ -368,6 +375,7 @@ header#home .result p span {
   header#home .image img.desktop.semfundo {
     filter: initial;
     z-index: 2;
+    height: auto; 
 
     animation: img infinite ease-in-out 10s;
   }
@@ -432,7 +440,7 @@ header#home .result p span {
   }
 
   header#home .depoimentos img {
-    width: 13rem;
+    width: 10rem;
   }
 
   header#home .result {
