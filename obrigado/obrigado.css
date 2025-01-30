@@ -1,0 +1,251 @@
+#obrigado {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f5fffb 70%, #eafff5);
+    position: relative;
+    z-index: 25;
+  
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+  
+    transition: all 200ms ease-in-out;
+    margin-bottom: 0;
+  
+    box-shadow: 10px 10px 50px #00422325;
+  }
+  
+  #obrigado .wrapper {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+  }
+  
+  #obrigado .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  #obrigado .blush {
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(#00ae5d53, transparent 50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    top: -35rem;
+    left: -50rem;
+    opacity: 0.2;
+  
+    animation: moveblush infinite 4s linear;
+  }
+  
+  #obrigado .blush.dois {
+    background: radial-gradient(#00ae5d4c, transparent 50%);
+    top: initial;
+    left: initial;
+    bottom: -45rem;
+    right: -60rem;
+  }
+  
+  #obrigado .text {
+    position: relative;
+    z-index: 4;
+  }
+  
+  #obrigado span.span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 7px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #obrigado img.logo {
+    width: 10rem;
+    height: auto; 
+  }
+  
+  #obrigado h1 {
+    color: var(--color-text);
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 2.5rem;
+  
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+    background: linear-gradient(155deg, #000, #00ae5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #obrigado h1 span {
+    font-weight: 600;
+  }
+  
+  #obrigado p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #292929;
+  }
+  
+  #obrigado p span {
+    font-weight: 700;
+  }
+
+  #obrigado .topics {
+    border: 2px solid #00452531;
+    margin-block: 2rem;
+    background: #00000017;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+ #obrigado .topics .topic p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #292929;
+ }
+  
+  #obrigado .image img {
+    width: 100%;
+    height: auto; 
+  }
+  
+  #obrigado .retangulo {
+    position: absolute;
+    top: 30%;
+    left: -1%;
+    z-index: 1;
+    width: 35px;
+    height: 20%;
+    background: linear-gradient(to bottom, #007E44, #00B662);
+    opacity: .2;
+    transform: rotate(-30deg);
+  }
+  
+  #obrigado .retangulo.dois {
+    left: inherit;
+    right: -1%;
+    transform: rotate(30deg);
+    z-index: 1;
+  }
+  
+  #obrigado img.graficos {
+    height: auto; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .08;
+    z-index: 3;
+  }
+  
+  #obrigado .image img.desktop {
+    display: none;
+  }
+  
+  #obrigado a button {
+    margin-top: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+  }
+  
+  @media (min-width: 1080px) {
+    header#obrigado {
+      background: var(--bg-green);
+      justify-content: center;
+      position: relative;
+  
+      height: 100vh;
+      z-index: 1;
+  
+      border-radius: 0;
+      box-shadow: initial;
+    }
+  
+    header#obrigado img.logo {
+      height: auto; 
+      width: 13rem;
+    }
+  
+    header#obrigado img.graficos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .08;
+      z-index: 3;
+    }
+  
+    header#obrigado .content {
+      text-align: center;
+      align-items: center;
+  
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    header#obrigado .content .text {
+      margin-top: initial;
+      margin-bottom: initial;
+  
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+  
+      position: relative;
+      z-index: 2;
+    }
+  
+    header#obrigado span.span {
+      font-size: 1.8rem;
+      letter-spacing: 20px;
+    }
+  
+    header#obrigado .content h1 {
+      font-size: 4.5rem;
+      line-height: 1;
+  
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    header#obrigado .content p {
+      font-size: 1.8rem;
+    }
+  
+    header#obrigado a button { 
+      margin-top: 3rem;
+    }
+  
+  }
+  
+  @media (min-width: 1700px) {
+    header#obrigado .content h1 {
+      font-size: 5.5rem;
+    }
+  
+    header#obrigado .content p {
+      font-size: 2.2rem;
+    }
+  }
+
