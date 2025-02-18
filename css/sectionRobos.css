@@ -103,6 +103,13 @@
     margin-bottom: 1rem;
 }
 
+#robos .cards .card h3 span {
+    display: block;
+    letter-spacing: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
 #robos .cards .card p {
     font-size: 1.6rem;
     color: #fff;
@@ -328,6 +335,7 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
 
     section#robos .cards .card:nth-child(even) .text .text-box {
         text-align: right;
+        align-items: end;
     }
     
     section#robos .cards .card .text img.icon {
@@ -339,7 +347,25 @@ body section#robos .wrapper .content .swiper.mySwiper4 .cards.swiper-wrapper {
 
     section#robos .cards .card .text h3 {
         font-size: 1.4rem;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        text-align: right;
+        gap: .5rem;
     }
+    
+    section#robos .cards .card h3 span {
+        display: inline;
+        letter-spacing: 0;
+        font-size: 1rem;
+        font-weight: 300;
+
+        background: #ffffff25;
+        padding: .4rem;
+        border-radius: .4rem;
+    }
+    
 
     section#robos .cards .card .text p {
         font-size: 1rem;
