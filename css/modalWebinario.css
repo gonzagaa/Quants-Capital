@@ -1,0 +1,197 @@
+/* Estilização do Overlay */
+.overlayWebinario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* Estilização do Modal */
+.modalWebinario {
+    border-radius: 2rem;
+    overflow: hidden;
+    position: fixed;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(5deg, #004223 0%, #00582f 100%);
+
+    padding: 3rem;
+    width: 95%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Exibir modal */
+.modalWebinario.show {
+    top: 50%;
+    opacity: 1;
+}
+
+/* Estilização do botão de fechar */
+.closeButtonWebinario {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1;
+    width: initial;
+}
+
+.modalWebinario img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    opacity: .6;
+}
+
+.text {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalWebinario h2 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.modalWebinario h3 {
+    margin-top: .5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba(27, 27, 27, 0.226);
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    width: 80%;
+}
+
+.modalWebinario h3 span {
+    opacity: .6;
+}
+
+.modalWebinario img.logo {
+    width: 8rem;
+}
+
+.modalWebinario p.artemis {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 2rem;
+    
+    background: var(--gradient);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modalWebinario p span {
+    font-weight: 800;
+}
+
+.modalWebinario p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+body #modalWebinario section#form-quants-webinario-511cc42628436695c0a6 {
+    padding-block: 0 !important;
+    margin-top: 2rem;
+    width: 100% !important;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+body #modalWebinario div#quants-webinario-511cc42628436695c0a6 {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+body #quants-webinario-511cc42628436695c0a6 .modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    width: 100%;
+}
+
+body #quants-webinario-511cc42628436695c0a6 #rd-column-m66rvitg > div {
+    padding: 0 !important;
+}
+
+body #modalWebinario section#form-quants-webinario-511cc42628436695c0a6 label {
+    color: #000000 !important;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+body #modalWebinario section#form-quants-webinario-511cc42628436695c0a6 input {
+    width: 100% !important;
+    font-size: 1.4rem !important;
+    padding: 1rem !important;
+
+    border: 1px solid #00000035;
+    border-radius: 1rem !important;
+}
+
+body #quants-webinario-511cc42628436695c0a6 .modal form input::placeholder {
+    opacity: .6;
+}
+
+body #quants-webinario-511cc42628436695c0a6 .modal form input:focus {
+    border: 1px solid #0d8400;
+    outline: none;
+}
+
+.modalWebinario form button {
+    margin-top: 3rem;
+    border-radius: 1rem !important;
+}
+
+body #quants-webinario-511cc42628436695c0a6 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+body #rd-column-m7c725g2 > div {
+    width: 100% !important;
+    background: transparent; 
+}
+
+@media (min-width: 1080px) {
+    .modalWebinario p:nth-child(4) {
+        width: 70%;
+    }
+}
