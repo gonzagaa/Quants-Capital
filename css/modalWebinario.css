@@ -123,9 +123,15 @@
     font-size: 1.2rem;
 }
 
+.modalWebinario h4 {
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
 body #modalWebinario section#form-quants-webinario-511cc42628436695c0a6 {
     padding-block: 0 !important;
-    margin-top: 2rem;
     width: 100% !important;
     overflow: hidden;
     border-radius: 1rem;
