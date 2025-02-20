@@ -13,7 +13,7 @@
 @import './navigation.css';
 @import './modalForm.css';
 @import './modalRobo.css';
-@import './modalWebinario.css';
+@import './modalWebinario.css?v=2.0';
 
 @import './button.css';
 @import './head.css';
