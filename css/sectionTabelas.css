@@ -143,6 +143,9 @@
     font-weight: 500;
 
     margin-top: 3rem;
+
+    position: relative;
+    z-index: 20;
 }
 
 #tabelas a button:hover {
