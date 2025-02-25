@@ -5,6 +5,7 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors()); // 🔥 Adicionando suporte ao CORS
 app.use(express.json());
 
 app.get('/', (req, res) => {
