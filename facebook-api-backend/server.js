@@ -1,11 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors'); // 🔥 Certifique-se de que esta linha está aqui
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // 🔥 Adicionando suporte ao CORS
+// 🔥 Configuração de CORS mais flexível
+app.use(cors({ origin: "*", methods: ["GET", "POST"], allowedHeaders: ["Content-Type"] }));
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -36,5 +39,5 @@ app.post('/send-event', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na portaa ${PORT}`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
