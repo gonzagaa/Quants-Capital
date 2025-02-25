@@ -22,6 +22,12 @@
 html {
     scroll-behavior: smooth;
   }
+
+  #cupom {
+    background: linear-gradient(to right, #003F87 0%, #007DC7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
   
   html,
   body {
