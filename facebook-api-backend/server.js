@@ -20,16 +20,23 @@ app.post('/send-event', async (req, res) => {
     try {
         const { event_name, event_time, user_data } = req.body;
 
-        const response = await axios.post(`https://graph.facebook.com/v18.0/${process.env.FB_PIXEL_ID}/events`, {
+        // 🔥 Garantindo que os dados mínimos do usuário sejam enviados
+        const eventData = {
             data: [
                 {
                     event_name,
                     event_time,
-                    user_data,
+                    user_data: {
+                        client_ip_address: req.ip, // Captura o IP do usuário
+                        client_user_agent: req.headers['user-agent'], // Captura o User-Agent
+                        ...user_data // Mantém outros dados enviados (se houver)
+                    },
                 },
             ],
             access_token: process.env.FB_ACCESS_TOKEN
-        });
+        };
+
+        const response = await axios.post(`https://graph.facebook.com/v18.0/${process.env.FB_PIXEL_ID}/events`, eventData);
 
         res.json({ success: true, response: response.data });
     } catch (error) {
@@ -37,6 +44,7 @@ app.post('/send-event', async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 });
+
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
