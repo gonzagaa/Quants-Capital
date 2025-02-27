@@ -20,7 +20,7 @@ app.post('/send-event', async (req, res) => {
     try {
         const { event_name, event_time, user_data } = req.body;
 
-        // 🔥 Garantindo que os dados mínimos do usuário sejam enviados
+        // 🔥 Melhorando os dados enviados ao Facebook
         const eventData = {
             data: [
                 {
@@ -29,6 +29,7 @@ app.post('/send-event', async (req, res) => {
                     user_data: {
                         client_ip_address: req.ip, // Captura o IP do usuário
                         client_user_agent: req.headers['user-agent'], // Captura o User-Agent
+                        external_id: req.ip.replace(/\./g, '') + '-' + Date.now(), // ID único baseado no IP e tempo
                         ...user_data // Mantém outros dados enviados (se houver)
                     },
                 },
