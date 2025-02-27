@@ -1,9 +1,20 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     let selectedPlan = null;
 
+    // Função para capturar o Facebook Click ID (fbc) do cookie
+    function getFacebookClickId() {
+        let fbc = "";
+        const match = document.cookie.match(/_fbc=([^;]+)/);
+        if (match) {
+            fbc = match[1];
+        }
+        return fbc;
+    }
+
     // Função para enviar eventos ao backend
     function sendEvent(eventName, userData = {}) {
+        const fbc = getFacebookClickId(); // Captura o fbc
+
         fetch("https://quants-capital.vercel.app/send-event", {
             method: "POST",
             headers: {
@@ -12,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({
                 event_name: eventName,
                 event_time: Math.floor(Date.now() / 1000),
-                user_data: userData
+                user_data: {
+                    ...userData,
+                    fbc: fbc || null // 🔥 Adicionando fbc ao evento
+                }
             })
         }).then(response => response.json())
           .then(data => console.log("Evento enviado:", data))

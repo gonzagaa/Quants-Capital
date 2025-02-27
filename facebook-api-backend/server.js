@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
-const cors = require('cors'); // 🔥 Certifique-se de que esta linha está aqui
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ app.post('/send-event', async (req, res) => {
     try {
         const { event_name, event_time, user_data } = req.body;
 
-        // 🔥 Melhorando os dados enviados ao Facebook
+        // 🔥 Melhorando a correspondência do evento
         const eventData = {
             data: [
                 {
@@ -30,6 +30,7 @@ app.post('/send-event', async (req, res) => {
                         client_ip_address: req.ip, // Captura o IP do usuário
                         client_user_agent: req.headers['user-agent'], // Captura o User-Agent
                         external_id: req.ip.replace(/\./g, '') + '-' + Date.now(), // ID único baseado no IP e tempo
+                        fbc: user_data.fbc || null, // 🔥 Capturando o Facebook Click ID (fbc)
                         ...user_data // Mantém outros dados enviados (se houver)
                     },
                 },
@@ -45,7 +46,6 @@ app.post('/send-event', async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 });
-
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
