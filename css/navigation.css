@@ -50,7 +50,7 @@
         padding-block: 2rem;
         bottom: initial;
         top: 3rem;
-
+        display: none;
         animation: navDesktop 8s ease-in-out backwards;
     }
 

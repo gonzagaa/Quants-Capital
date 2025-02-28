@@ -181,6 +181,55 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Ajuste para data-alvo 05/03/2025:
+const targetDate = new Date("2025-03-05T00:00:00");
+
+// Atualiza o timer a cada segundo
+const timerInterval = setInterval(updateCountdown, 1000);
+updateCountdown(); // Atualiza ao carregar a página
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "Tempo esgotado!";
+    clearInterval(timerInterval);
+    return;
+  }
+
+  // Cálculos de dias, horas, minutos, segundos
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Cria 4 "caixas", cada uma com número + unidade
+  const countdownHTML = `
+    <div class="time-container">
+      <div class="time-box">
+        <span class="count-number">${days}</span>
+        <span class="count-unit">d</span>
+      </div>
+      <div class="time-box">
+        <span class="count-number">${hours}</span>
+        <span class="count-unit">h</span>
+      </div>
+      <div class="time-box">
+        <span class="count-number">${minutes}</span>
+        <span class="count-unit">m</span>
+      </div>
+      <div class="time-box">
+        <span class="count-number">${seconds}</span>
+        <span class="count-unit">s</span>
+      </div>
+    </div>
+  `;
+
+  // Insere na tela
+  document.getElementById("countdown").innerHTML = countdownHTML;
+}
+
 
 
 

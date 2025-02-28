@@ -1,0 +1,138 @@
+.tarja {
+    overflow: hidden;
+    position: relative;
+    height: max-content;
+    background: linear-gradient(5deg, #004223 0%, #00582f 100%);
+
+    padding-block: 2rem;
+}
+
+.tarja img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 1;
+    mix-blend-mode: darken;
+    opacity: .6;
+    filter: brightness(.3);
+}
+
+.tarja .wrapper {
+    height: 100%;
+}
+
+.tarja .text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarja .text h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tarja .text h3 span {
+    color: #fff;    
+    background: var(--gradient);
+    padding: .8rem 1.6rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.tarja .timer {
+    color: #fff;
+    background: linear-gradient(to bottom, #00b6615c 0%, #007e4358 100%); 
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.tarja .timer #countdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tarja .timer #countdown .time-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.tarja .timer #countdown .count-number {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.tarja .timer #countdown .count-unit {
+    font-size: 1.6rem;
+}
+
+@media (min-width: 1080px) {
+    .tarja img.bg {
+        opacity: .7;
+    filter: brightness(.3);
+    }
+
+    .tarja {
+        padding-block: 3rem;
+    }
+
+    .tarja .text {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding-inline: 15%;
+    }
+
+    .tarja .wrapper .text h3 {
+        text-align: left;
+        color: #fff;
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .tarja .timer {
+        margin-bottom: 0;
+    }
+
+    .tarja .timer #countdown .time-container {
+        gap: 3rem;
+    }
+
+    .tarja .timer #countdown .count-number {
+        font-size: 5rem;
+        font-weight: 600;
+    }
+    
+    .tarja .timer #countdown .count-unit {
+        font-size: 3rem;
+    }
+
+    .tarja .text p span {
+        font-size: 6rem;
+    }
+
+    .tarja .text p {
+        font-size: 1.6rem;
+    }
+
+    .tarja .text h3 {
+        font-size: 1.7rem;
+    }
+
+    .tarja .text h4 {
+        font-size: 1.7rem;
+    }
+}
+
