@@ -111,12 +111,12 @@
     }
 
     .tarja .timer #countdown .count-number {
-        font-size: 5rem;
+        font-size: 4.5rem;
         font-weight: 600;
     }
     
     .tarja .timer #countdown .count-unit {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .tarja .text p span {
