@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     let selectedPlan = null;
 
+    // Função para gerar um ID único para cada evento (para desduplicação)
+    function generateEventId() {
+        return 'event-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    }
+
     // Função para capturar o Facebook Click ID (fbc) do cookie
     function getFacebookClickId() {
         let fbc = "";
@@ -11,10 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
         return fbc;
     }
 
-    // Função para enviar eventos ao backend
+    // Função para enviar eventos ao Facebook Pixel (Navegador)
+    function sendPixelEvent(eventName, eventId) {
+        if (typeof fbq !== "undefined") {
+            fbq("track", eventName, {}, { eventID: eventId });
+            console.log(`Evento enviado via Pixel: ${eventName} | eventID: ${eventId}`);
+        }
+    }
+
+    // Função para enviar eventos ao backend (API de Conversões)
     function sendEvent(eventName, userData = {}) {
+        const eventId = generateEventId(); // Gerar um event_id único
         const fbc = getFacebookClickId(); // Captura o fbc
 
+        // Envia pelo Pixel (Navegador)
+        sendPixelEvent(eventName, eventId);
+
+        // Envia pela API de Conversões (Backend)
         fetch("https://quants-capital.vercel.app/send-event", {
             method: "POST",
             headers: {
@@ -23,13 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({
                 event_name: eventName,
                 event_time: Math.floor(Date.now() / 1000),
+                event_id: eventId, // 🔥 ID do evento para desduplicação
                 user_data: {
                     ...userData,
                     fbc: fbc || null // 🔥 Adicionando fbc ao evento
                 }
             })
         }).then(response => response.json())
-          .then(data => console.log("Evento enviado:", data))
+          .then(data => console.log("Evento enviado via API:", data))
           .catch(error => console.error("Erro ao enviar evento:", error));
     }
 

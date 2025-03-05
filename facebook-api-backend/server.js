@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 // Rota para enviar eventos ao Facebook
 app.post('/send-event', async (req, res) => {
     try {
-        const { event_name, event_time, user_data = {} } = req.body;
+        const { event_name, event_time, event_id, user_data = {} } = req.body;
 
         // 🔥 Melhorando a correspondência dos eventos
         const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || null;
@@ -27,9 +27,10 @@ app.post('/send-event', async (req, res) => {
                 {
                     event_name,
                     event_time,
+                    event_id, // 🔥 ID do evento para desduplicação
                     user_data: {
-                        client_ip_address: ip, // 🔥 Agora captura corretamente o IP do usuário
-                        client_user_agent: userAgent, // 🔥 Agora captura corretamente o User-Agent
+                        client_ip_address: ip, // Captura corretamente o IP do usuário
+                        client_user_agent: userAgent, // Captura corretamente o User-Agent
                         external_id: ip ? ip.replace(/\./g, '') + '-' + Date.now() : null, // ID único baseado no IP e tempo
                         fbc: user_data.fbc || null, // Facebook Click ID (se disponível)
                         ...user_data // Mantém outros dados enviados (se houver)
