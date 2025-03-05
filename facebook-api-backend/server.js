@@ -6,9 +6,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 🔥 Configuração de CORS mais flexível
 app.use(cors({ origin: "*", methods: ["GET", "POST"], allowedHeaders: ["Content-Type"] }));
-
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -18,19 +16,22 @@ app.get('/', (req, res) => {
 // Rota para enviar eventos ao Facebook
 app.post('/send-event', async (req, res) => {
     try {
-        const { event_name, event_time, user_data } = req.body;
+        const { event_name, event_time, user_data = {} } = req.body;
 
-        // 🔥 Melhorando a correspondência do evento
+        // 🔥 Melhorando a correspondência dos eventos
+        const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || null;
+        const userAgent = req.headers['user-agent'] || null;
+
         const eventData = {
             data: [
                 {
                     event_name,
                     event_time,
                     user_data: {
-                        client_ip_address: req.ip, // Captura o IP do usuário
-                        client_user_agent: req.headers['user-agent'], // Captura o User-Agent
-                        external_id: req.ip.replace(/\./g, '') + '-' + Date.now(), // ID único baseado no IP e tempo
-                        fbc: user_data.fbc || null, // 🔥 Capturando o Facebook Click ID (fbc)
+                        client_ip_address: ip, // 🔥 Agora captura corretamente o IP do usuário
+                        client_user_agent: userAgent, // 🔥 Agora captura corretamente o User-Agent
+                        external_id: ip ? ip.replace(/\./g, '') + '-' + Date.now() : null, // ID único baseado no IP e tempo
+                        fbc: user_data.fbc || null, // Facebook Click ID (se disponível)
                         ...user_data // Mantém outros dados enviados (se houver)
                     },
                 },
