@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let selectedPlan = null;
+    let formSource = null; // Para armazenar de onde o formulário foi aberto
 
     // Função para gerar um ID único para cada evento (para desduplicação)
     function generateEventId() {
@@ -52,24 +52,32 @@ document.addEventListener("DOMContentLoaded", () => {
           .catch(error => console.error("Erro ao enviar evento:", error));
     }
 
-    // Captura o clique nos botões de abrir o formulário
-    document.querySelectorAll(".openModalForm").forEach(button => {
+    // Captura o clique nos botões de checkout dos planos
+    document.querySelectorAll(".openCheckout").forEach(button => {
         button.addEventListener("click", (event) => {
-            selectedPlan = event.target.getAttribute("data-plan");
-            console.log("Plano selecionado:", selectedPlan);
-            if (selectedPlan === "plus") {
-                sendEvent("Abriu formulário do plano Plus");
-            } else if (selectedPlan === "person") {
-                sendEvent("Abriu formulário do plano Person");
+            const plan = event.target.getAttribute("data-plan");
+            if (plan === "plus") {
+                sendEvent("Redirecionado pro checkout do plano Plus");
+            } else if (plan === "person") {
+                sendEvent("Redirecionado pro checkout do plano Person");
             }
         });
     });
 
-    // Captura o clique no botão de fechar o formulário
-    const closeModal = document.getElementById("closeModal");
-    if (closeModal) {
-        closeModal.addEventListener("click", () => {
-            sendEvent("Fechou formulário sem enviar os dados");
+    // Captura o clique nos botões que abrem o formulário de Consultor
+    document.querySelectorAll(".openModalForm").forEach(button => {
+        button.addEventListener("click", (event) => {
+            formSource = "consultor"; // Define a origem do formulário
+            sendEvent("Abriu formulário - Consultor");
+        });
+    });
+
+    // Captura o clique no botão do WhatsApp que abre o formulário
+    const whatsappButton = document.querySelector(".btn-whatsapp-pulse");
+    if (whatsappButton) {
+        whatsappButton.addEventListener("click", () => {
+            formSource = "whatsapp"; // Define a origem do formulário
+            sendEvent("Abriu formulário - Botão Whatsapp");
         });
     }
 
@@ -81,10 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (form.closest("#quants-prepopulado-6fafab484f5fa0d4b38b")) {
             console.log("Formulário RD enviado!");
 
-            if (selectedPlan) {
-                sendEvent(`Enviou formulário do plano ${selectedPlan.toUpperCase()}`);
-                selectedPlan = null; // Resetar após envio
+            if (formSource === "consultor") {
+                sendEvent("Enviou Formulario - Consultor");
+            } else if (formSource === "whatsapp") {
+                sendEvent("Enviou Formulario - Botão Whatsapp");
             }
+
+            formSource = null; // Resetar após envio
         }
     }, true); // Usa `true` para capturar o evento na fase de captura
 });

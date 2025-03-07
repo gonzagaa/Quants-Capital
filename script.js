@@ -1,3 +1,27 @@
+window.addEventListener('scroll', onScroll)
+
+onScroll()
+function onScroll() {
+    showNavOnScroll()
+}
+
+function showNavOnScroll() {
+    if(scrollY > 0) {
+        document.querySelector("#navigation").classList.add("scroll")
+    } else {
+        document.querySelector("#navigation").classList.remove("scroll")
+    }
+}
+
+function openMenu() {
+    document.body.classList.add('menu-expanded')
+}
+
+function closeMenu() {
+    document.body.classList.remove('menu-expanded')
+}
+
+
 const larguraDaTela = window.innerWidth
 
 if (larguraDaTela < 800) {
@@ -30,29 +54,33 @@ if (larguraDaTela < 800) {
   });
 }
 
-// Seleciona os elementos
+// Seleciona os novos botões para abrir o modal
 const openModalButtons = document.querySelectorAll('.openModalForm');
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModalButton = document.getElementById('closeModal');
 
-// Variável para armazenar o plano atual
-let currentPlan = null;
+// Variável para armazenar a origem do modal (WhatsApp ou Obrigado)
+let redirectType = null;
 
-// Função para abrir o modal e identificar o plano
+// Função para abrir o modal e definir o tipo de redirecionamento
 function openModal(event) {
     modalOverlay.classList.add('active');
 
-    // Identifica o plano a partir do botão clicado
-    currentPlan = event.target.getAttribute('data-plan');
+    // Verifica qual botão foi clicado e define o tipo de redirecionamento
+    if (event.target.closest('.btn-whatsapp-pulse')) {
+        redirectType = 'whatsapp';
+    } else {
+        redirectType = 'obrigado';
+    }
 }
 
 // Função para fechar o modal
 function closeModal() {
     modalOverlay.classList.remove('active');
-    currentPlan = null; // Reseta o plano
+    redirectType = null; // Reseta a variável
 }
 
-// Adiciona evento para abrir o modal
+// Adiciona evento para abrir o modal nos novos botões
 openModalButtons.forEach(button => {
     button.addEventListener('click', openModal);
 });
@@ -69,50 +97,49 @@ modalOverlay.addEventListener('click', (event) => {
     }
 });
 
-// Usar MutationObserver para detectar quando o botão for renderizado
+// Usar MutationObserver para detectar quando o botão de envio do formulário for renderizado
 const observer = new MutationObserver((mutationsList, observer) => {
     const formButton = document.getElementById('rd-button-m66rvitk'); // Substitua pelo ID correto
 
     if (formButton) {
-        // Adicionar a classe "link4Selet"
-        formButton.classList.add('link4Selet');
-        console.log('Classe "link4Selet" adicionada ao botão!');
+        console.log('Botão do formulário detectado!');
 
-        // Adicionar o evento de clique para redirecionamento
-        formButton.addEventListener('click', (e) => {
-            // Seleciona o formulário inserido pelo RD Station dentro do container
-            const formElement = document.querySelector('#quants-prepopulado-6fafab484f5fa0d4b38b form');
+        // Captura o formulário
+        const formElement = document.querySelector('#quants-prepopulado-6fafab484f5fa0d4b38b form');
 
-            // Verifica se o formulário existe e está válido
-            if (formElement && formElement.checkValidity()) {
-                let checkoutLink;
+        if (!formElement) {
+            console.error('Formulário não encontrado!');
+            return;
+        }
 
-                // Define o link do checkout com base no plano
-                if (currentPlan === 'lite') {
-                    checkoutLink = 'https://app.4selet.com.br/checkout/d68c9ea4-77bd-4a6b-bc4d-f14eecf1e8b3';
-                } else if (currentPlan === 'plus') {
-                    checkoutLink = 'https://app.4selet.com.br/checkout/b9df07e0-02f3-424a-b391-239dc7f94d62';
-                } else if (currentPlan === 'person') {
-                    checkoutLink = 'https://app.4selet.com.br/checkout/6ba34969-df8d-4e98-a054-426bf3898eb4';
+        // Adiciona um evento para capturar o envio do formulário
+        formElement.addEventListener('submit', (e) => {
+            e.preventDefault(); // Impede o envio padrão para evitar comportamentos inesperados
+
+            // Verifica se o formulário está válido antes de redirecionar
+            if (formElement.checkValidity()) {
+                let redirectLink;
+
+                // Define o link de redirecionamento com base no botão que abriu o modal
+                if (redirectType === 'whatsapp') {
+                    redirectLink = 'https://wa.link/htpdnw';
+                } else {
+                    redirectLink = 'https://lp.quantscapital.com.br/obrigado-contato';
                 }
 
-                // Redireciona para o link do checkout se houver um link definido
-                if (checkoutLink) {
-                    window.location.href = checkoutLink;
-                }
+                // Aguarda um pequeno tempo antes de redirecionar para garantir que o envio foi processado
+                setTimeout(() => {
+                    window.location.href = redirectLink;
+                }, 500); // Pequeno delay para garantir que o envio foi registrado
             } else {
-                // Se o formulário não for válido, exibe as mensagens de erro
-                if (formElement) {
-                    formElement.reportValidity();
-                }
-                // Impede o redirecionamento
-                e.preventDefault();
+                // Se o formulário não estiver válido, exibe mensagens de erro
+                formElement.reportValidity();
             }
         });
 
-        // Parar de observar após encontrar o botão
+        // Parar de observar após encontrar o botão e configurar o evento
         observer.disconnect();
-        console.log('Botão do formulário encontrado, classe adicionada e evento configurado!');
+        console.log('Evento de envio configurado para redirecionamento.');
     }
 });
 
@@ -121,6 +148,7 @@ observer.observe(document.body, {
     childList: true,
     subtree: true,
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -181,54 +209,54 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Ajuste para data-alvo 05/03/2025:
-const targetDate = new Date("2025-03-06T00:00:00");
+// // Ajuste para data-alvo 05/03/2025:
+// const targetDate = new Date("2025-03-06T00:00:00");
 
-// Atualiza o timer a cada segundo
-const timerInterval = setInterval(updateCountdown, 1000);
-updateCountdown(); // Atualiza ao carregar a página
+// // Atualiza o timer a cada segundo
+// const timerInterval = setInterval(updateCountdown, 1000);
+// updateCountdown(); // Atualiza ao carregar a página
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+// function updateCountdown() {
+//   const now = new Date().getTime();
+//   const distance = targetDate - now;
 
-  if (distance < 0) {
-    document.getElementById("countdown").innerHTML = "Tempo esgotado!";
-    clearInterval(timerInterval);
-    return;
-  }
+//   if (distance < 0) {
+//     document.getElementById("countdown").innerHTML = "Tempo esgotado!";
+//     clearInterval(timerInterval);
+//     return;
+//   }
 
-  // Cálculos de dias, horas, minutos, segundos
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   // Cálculos de dias, horas, minutos, segundos
+//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Cria 4 "caixas", cada uma com número + unidade
-  const countdownHTML = `
-    <div class="time-container">
-      <div class="time-box">
-        <span class="count-number">${days}</span>
-        <span class="count-unit">d</span>
-      </div>
-      <div class="time-box">
-        <span class="count-number">${hours}</span>
-        <span class="count-unit">h</span>
-      </div>
-      <div class="time-box">
-        <span class="count-number">${minutes}</span>
-        <span class="count-unit">m</span>
-      </div>
-      <div class="time-box">
-        <span class="count-number">${seconds}</span>
-        <span class="count-unit">s</span>
-      </div>
-    </div>
-  `;
+//   // Cria 4 "caixas", cada uma com número + unidade
+//   const countdownHTML = `
+//     <div class="time-container">
+//       <div class="time-box">
+//         <span class="count-number">${days}</span>
+//         <span class="count-unit">d</span>
+//       </div>
+//       <div class="time-box">
+//         <span class="count-number">${hours}</span>
+//         <span class="count-unit">h</span>
+//       </div>
+//       <div class="time-box">
+//         <span class="count-number">${minutes}</span>
+//         <span class="count-unit">m</span>
+//       </div>
+//       <div class="time-box">
+//         <span class="count-number">${seconds}</span>
+//         <span class="count-unit">s</span>
+//       </div>
+//     </div>
+//   `;
 
-  // Insere na tela
-  document.getElementById("countdown").innerHTML = countdownHTML;
-}
+//   // Insere na tela
+//   document.getElementById("countdown").innerHTML = countdownHTML;
+// }
 
 
 

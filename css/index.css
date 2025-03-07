@@ -11,12 +11,15 @@
 @import './footer.css';
 
 @import './navigation.css';
+@import './navigationButton.css';
 @import './modalForm.css';
 @import './modalRobo.css';
 @import './modalWebinario.css?v=2.0';
 
 @import './button.css';
+@import './buttonWhatsapp.css';
 @import './head.css';
 
 @import './tarja.css';
+
 

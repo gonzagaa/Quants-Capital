@@ -64,7 +64,7 @@
 
 </head>
 <body id="body" class="smooth-scroll-wrapper">    
-    <nav id="navigation">
+    <!-- <nav id="navigation-button">
         <div class="wrapper">
             <div class="content">
                 <img class="logo" src="./assets/LOGO BRANCA QUANTS.webp" alt="">
@@ -72,9 +72,52 @@
                 <a href="#planos"><button>COMECE AGORA</button></a>
             </div>
         </div>
+    </nav> -->
+
+    <nav id="navigation" class="">
+        <div class="wrapper">
+
+            <a class="logo" href="#home">
+                <img src="./assets/logo quants verde.webp" alt="Logo LSB Digital">
+            </a>
+            
+            <div class="menu">
+
+                <ul>
+                    <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                    <li><a onclick="closeMenu()" href="#inicio">Conheça</a></li>
+                    <li><a onclick="closeMenu()" href="#robos">Nossos robôs</a></li>
+                    <li><a onclick="closeMenu()" href="#planos">Planos</a></li>
+                    <li><a onclick="closeMenu()" href="#comece">Sobre</a></li>
+                </ul>
+ 
+             </div>
+
+            <button 
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            onclick="openMenu()" 
+            class="open-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 28L30 28" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+            <button
+            aria-expanded="true"
+            aria-label="Fechar menu"
+            onclick="closeMenu()" 
+            class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+            </button>
+
+        </div>       
     </nav>
 
-    <div class="tarja">
+    <!-- <div class="tarja">
         <img class="bg" src="./assets/graficos quants.webp" alt="">
 
         <div class="wrapper">
@@ -87,7 +130,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <header class="header" id="home">
         <img class="graficos" src="./assets/graficos quants.webp" alt="">
@@ -97,11 +140,11 @@
         <div class="wrapper">
            <div class="content">
               <div class="text">
-                    <img class="logo" src="./assets/logo quants verde.webp" alt="">
+                    <!-- <img class="logo" src="./assets/logo quants verde.webp" alt=""> -->
                     <h1 data-aos="fade-up-right">Sua plataforma automatizada para investimentos de<span> alto potencial</span>.</h1>
                     <p data-aos="fade-up-right">Transforme <span>risco em resultados</span> e tenha rendimentos até <span>25x mais</span> que a taxa selic</p>
                     <div data-aos="fade-up-right" class="buttons">
-                        <a href="#planos"><button class="icon">VER COMO <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                        <a><button class="icon openModalForm">FALAR COM UM CONSULTOR<ion-icon name="chevron-forward-outline"></ion-icon></button></a>
                     </div>
                     <div data-aos="fade-up" class="depoimentos">
                         <img src="./assets/depoimentos.png" alt="" />
@@ -428,7 +471,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <a href="#planos"><button class="icon">COMEÇAR A INVESTIR <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                <a><button class="icon openModalForm">COMEÇAR A INVESTIR <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
             </div>
         </div>      
     </section>
@@ -499,7 +542,7 @@
                             <h5><span>R$</span>249<span>,70</span></h5>
                         </div>
 
-                        <a><button data-plan="plus" class="openModalForm">ADQUIRIR</button></a>
+                        <a target="_blank" href="https://app.4selet.com.br/checkout/b9df07e0-02f3-424a-b391-239dc7f94d62"><button data-plan="plus" class="link4Selet">ADQUIRIR</button></a>
                     </div>
 
                     <div data-aos="fade-up" class="card person">
@@ -526,7 +569,7 @@
                             <h5><span>R$</span>599<span>,70</span></h5>
                         </div>
 
-                        <a><button data-plan="person" class="openModalForm">ADQUIRIR</button></a>
+                        <a target="_blank" href="https://app.4selet.com.br/checkout/6ba34969-df8d-4e98-a054-426bf3898eb4"><button data-plan="person" class="link4Selet">ADQUIRIR</button></a>
                     </div>
                 </div>
             </div>
@@ -658,13 +701,17 @@
         <div class="modal">
             <span class="close-modal" id="closeModal">&times;</span>
             <header>
-                <span class="span">FINALIZE SUA COMPRA</span>
-                <h2>Para finalizar a sua compra, insira os seguintes dados:</h2>
+                <span class="span">JÁ ENTRAREMOS EM CONTATO!</span>
+                <h2>Para adiantar o seu atendimento, insira algumas informações:</h2>
             </header>
 
             <div role="main" id="quants-prepopulado-6fafab484f5fa0d4b38b"></div><script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script><script type="text/javascript"> new RDStationForms('quants-prepopulado-6fafab484f5fa0d4b38b', 'null').createForm();</script>
         </div>
     </div>
+
+    <a class="btn-whatsapp-pulse openModalForm">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXF34HD5"
