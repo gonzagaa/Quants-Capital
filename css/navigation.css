@@ -207,13 +207,13 @@ nav {
       }
   
       nav#navigation {
-        width: calc(100% - 200px);
-        left: 100px;
+        width: calc(100% - 100px);
+        left: 50px;
         border-radius: 2rem;
-        top: 4rem;
+        top: 3rem;
 
-        background-color: rgba(255, 255, 255, 0.252);
-        border: 2px solid #00000027;
+        background-color: rgba(255, 255, 255, 0.849);
+        border: 4px solid #ffffff13;
 
       }
 
@@ -241,11 +241,11 @@ nav {
       nav#navigation .menu ul li a {
         font-weight: 500;
         opacity: .7;
-        color: #fff;
+        color: #000000;
       }
   
       nav#navigation .menu ul li a:hover {
-        color: #fff;
+        color: #000000;
         opacity: 1;
       }
 
