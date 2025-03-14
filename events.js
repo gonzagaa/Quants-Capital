@@ -72,12 +72,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Captura o envio do formulário RD Station
+    // Captura o envio do formulário RD Station e verifica a validação antes de enviar o evento
     document.addEventListener("submit", function (event) {
         const form = event.target;
-        
+
         // Verifica se o formulário pertence ao RD Station
         if (form.closest("#quants-prepopulado-6fafab484f5fa0d4b38b") && formOpened) {
+            // 🔥 Verifica se o formulário é válido antes de enviar o evento
+            if (!form.checkValidity()) {
+                console.log("Formulário inválido. Evento não enviado.");
+                return; // 🔥 Se o formulário não for válido, o evento NÃO será enviado
+            }
+
             console.log("Formulário de contato enviado!");
             sendEvent("Enviou formulário de contato");
             formOpened = false; // Resetar após envio
