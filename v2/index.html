@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quants Capital</title>
     <link rel="shortcut icon" href="" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,44 +29,43 @@
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/index.css?v=3.0">
-    <link rel="stylesheet" href="./v2.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css?v=4">
+    <link rel="stylesheet" href="./v2.css?v=2">
 
     <!-- Primary Meta Tags -->
-    <title>Quants Capital - Investimentos conservadores não vão escalar o rendimento do seu dinheiro. Nossa plataforma automatizada, sim.</title>
-    <meta name="title" content="Quants Capital - Investimentos conservadores não vão escalar o rendimento do seu dinheiro. Nossa plataforma automatizada, sim." />
-    <meta name="description" content="A nossa ferramenta possui uma ampla gama de estratégias, que se adaptam aos diversos cenários do mercado. Aqui, nosso risco é controlado e lucrativo. Veja aqui como nossa automação inteligente rendeu 25x mais que a taxa selic." />
+    <title>Quants Capital - Sua plataforma automatizada para investimentos de alto potencial.</title>
+    <meta name="title" content="Quants Capital - Sua plataforma automatizada para investimentos de alto potencial." />
+    <meta name="description" content="Transforme risco em resultados e tenha rendimentos até 25x mais que a taxa selic." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lp.quantscapital.com.br/" />
-    <meta property="og:title" content="Quants Capital - Investimentos conservadores não vão escalar o rendimento do seu dinheiro. Nossa plataforma automatizada, sim." />
-    <meta property="og:description" content="A nossa ferramenta possui uma ampla gama de estratégias, que se adaptam aos diversos cenários do mercado. Aqui, nosso risco é controlado e lucrativo. Veja aqui como nossa automação inteligente rendeu 25x mais que a taxa selic." />
+    <meta property="og:title" content="Quants Capital - Sua plataforma automatizada para investimentos de alto potencial." />
+    <meta property="og:description" content="Transforme risco em resultados e tenha rendimentos até 25x mais que a taxa selic." />
     <meta property="og:image" content="https://lp.quantscapital.com.br/assets/banner.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://lp.quantscapital.com.br/" />
-    <meta property="twitter:title" content="Quants Capital - Investimentos conservadores não vão escalar o rendimento do seu dinheiro. Nossa plataforma automatizada, sim." />
-    <meta property="twitter:description" content="A nossa ferramenta possui uma ampla gama de estratégias, que se adaptam aos diversos cenários do mercado. Aqui, nosso risco é controlado e lucrativo. Veja aqui como nossa automação inteligente rendeu 25x mais que a taxa selic." />
+    <meta property="twitter:title" content="Quants Capital - Sua plataforma automatizada para investimentos de alto potencial." />
+    <meta property="twitter:description" content="Transforme risco em resultados e tenha rendimentos até 25x mais que a taxa selic." />
     <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
 
     <meta name="Author" content="Quants Capital">
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://lp.quantscapital.com.br/v2">
+    <link rel="canonical" href="https://lp.quantscapital.com.br">
     <link rel="sitemap" type="application/xml" href="../sitemap.xml">
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <link rel="preload" as="image" href="../assets/homem-com-fundo-mobile.webp"/>
+
 </head>
 <body id="body" class="smooth-scroll-wrapper">    
-    <nav id="navigation">
+    <!-- <nav id="navigation-button">
         <div class="wrapper">
             <div class="content">
                 <img class="logo" src="../assets/LOGO BRANCA QUANTS.webp" alt="">
@@ -75,9 +73,52 @@
                 <a href="#planos"><button>COMECE AGORA</button></a>
             </div>
         </div>
+    </nav> -->
+
+    <nav id="navigation" class="">
+        <div class="wrapper">
+
+            <a class="logo" href="#home">
+                <img src="../assets/logo quants verde.webp" alt="Logo LSB Digital">
+            </a>
+            
+            <div class="menu">
+
+                <ul>
+                    <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                    <li><a onclick="closeMenu()" href="#inicio">Conheça</a></li>
+                    <li><a onclick="closeMenu()" href="#robos">Nossos robôs</a></li>
+                    <li><a onclick="closeMenu()" href="#planos">Planos</a></li>
+                    <li><a onclick="closeMenu()" href="#comece">Sobre</a></li>
+                </ul>
+ 
+             </div>
+
+            <button 
+            aria-expanded="false"
+            aria-label="Abrir menu"
+            onclick="openMenu()" 
+            class="open-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 20H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 12H30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 28L30 28" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> 
+            </button>
+            <button
+            aria-expanded="true"
+            aria-label="Fechar menu"
+            onclick="closeMenu()" 
+            class="close-menu">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+            </button>
+
+        </div>       
     </nav>
 
-    <header class="header v2" id="home">
+    <header class="header" id="home">
         <img class="graficos" src="../assets/graficos quants.webp" alt="">
         <div class="blush um"></div>
         <div class="blush dois"></div>
@@ -85,11 +126,11 @@
         <div class="wrapper">
            <div class="content">
               <div class="text">
-                    <img class="logo" src="../assets/logo quants verde.webp" alt="">
+                    <!-- <img class="logo" src="../assets/logo quants verde.webp" alt=""> -->
                     <h1 class="v2" data-aos="fade-up-right">Investimentos conservadores não vão escalar o rendimento do seu dinheiro. Nossa plataforma automatizada, sim.</h1>
                     <p class="v2" data-aos="fade-up-right">A nossa ferramenta possui uma <span>ampla gama de estratégias</span>, que se adaptam aos <span>diversos cenários do mercado</span>. Aqui, nosso risco é <span>controlado e lucrativo</span>. Veja aqui como nossa automação inteligente rendeu <span>25x mais que a taxa selic</span>.</p>
                     <div data-aos="fade-up-right" class="buttons">
-                        <a href="#planos"><button class="icon">VER COMO <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                        <a><button class="icon openModalForm">FALAR COM UM CONSULTOR<ion-icon name="chevron-forward-outline"></ion-icon></button></a>
                     </div>
                     <div data-aos="fade-up" class="depoimentos">
                         <img src="../assets/depoimentos.png" alt="" />
@@ -101,9 +142,9 @@
         <div class="image">
                 <div class="retangulo"></div>
                 <div class="retangulo dois"></div>
-                <img class="desktop" src="../assets/homem com fundo.webp" alt="">
-                <img  class="desktop semfundo" src="../assets/homem sem fundo.webp" alt="">
-                <img class="mobile" src="../assets/homem com fundo mobile.webp" alt="">
+                <img loading="lazy" class="desktop" src="../assets/homem com fundo.webp" alt="">
+                <img loading="lazy" class="desktop semfundo" src="../assets/homem sem fundo.webp" alt="">
+                <img class="mobile" fetchpriority="high" src="../assets/homem com fundo mobile.webp" alt="">
                 <img class="mobile semfundo" src="../assets/homem sem fundo mobile.webp" alt="">
 
                 <div class="result turbinada">
@@ -228,7 +269,7 @@
             </svg>
         </div>
     </section>
-    
+
     <section id="robos">
         <div class="wrapper">
             <div class="content">
@@ -268,9 +309,9 @@
                         </div>
 
                         <!-- <div class="card swiper-slide" data-aos="fade-left">
-                            <img class="bg" src="./assets/capasrobos/2.png" alt="">
+                            <img class="bg" src="../assets/capasrobos/2.png" alt="">
                             <div class="text">
-                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <img class="icon" src="../assets/icon quants.png" alt="">
                                 <div class="text-box">
                                     <h3>ALASKA SQUARE II</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
@@ -372,9 +413,9 @@
                         </div>
 
                         <!-- <div class="card swiper-slide" data-aos="fade-left">
-                            <img class="bg" src="./assets/capasrobos/6.png" alt="">
+                            <img class="bg" src="../assets/capasrobos/6.png" alt="">
                             <div class="text">
-                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <img class="icon" src="../assets/icon quants.png" alt="">
                                 <div class="text-box">
                                     <h3>QUANTS</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
@@ -385,9 +426,9 @@
                         </div> -->
 
                         <!-- <div class="card swiper-slide" data-aos="fade-right">
-                            <img class="bg" src="./assets/capasrobos/7.png" alt="">
+                            <img class="bg" src="../assets/capasrobos/7.png" alt="">
                             <div class="text">
-                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <img class="icon" src="../assets/icon quants.png" alt="">
                                 <div class="text-box">
                                     <h3>PEGASUS</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
@@ -398,9 +439,9 @@
                         </div> -->
 
                         <!-- <div class="card swiper-slide" data-aos="fade-left">
-                            <img class="bg" src="./assets/capasrobos/8.png" alt="">
+                            <img class="bg" src="../assets/capasrobos/8.png" alt="">
                             <div class="text">
-                                <img class="icon" src="./assets/icon quants.png" alt="">
+                                <img class="icon" src="../assets/icon quants.png" alt="">
                                 <div class="text-box">
                                     <h3>ZEUS</h3>
                                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid tenetur.
@@ -416,7 +457,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <a href="#planos"><button class="icon">COMEÇAR A INVESTIR <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
+                <a><button class="icon openModalForm">COMEÇAR A INVESTIR <ion-icon name="chevron-forward-outline"></ion-icon></button></a>
             </div>
         </div>      
     </section>
@@ -427,7 +468,7 @@
                 <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
             </svg>
         </div>
-        <img class="graficos" src="../assets/graficos quants.webp" alt="">
+        <img loading="lazy" class="graficos" src="../assets/graficos quants.webp" alt="">
 
         <div class="wrapper">
             <div class="content">
@@ -487,7 +528,7 @@
                             <h5><span>R$</span>249<span>,70</span></h5>
                         </div>
 
-                        <a><button data-plan="plus" class="openModalForm">ADQUIRIR</button></a>
+                        <a target="_blank" href="https://app.4selet.com.br/checkout/b9df07e0-02f3-424a-b391-239dc7f94d62"><button data-plan="plus" class="link4Selet">ADQUIRIR</button></a>
                     </div>
 
                     <div data-aos="fade-up" class="card person">
@@ -514,7 +555,7 @@
                             <h5><span>R$</span>599<span>,70</span></h5>
                         </div>
 
-                        <a><button data-plan="person" class="openModalForm">ADQUIRIR</button></a>
+                        <a target="_blank" href="https://app.4selet.com.br/checkout/6ba34969-df8d-4e98-a054-426bf3898eb4"><button data-plan="person" class="link4Selet">ADQUIRIR</button></a>
                     </div>
                 </div>
             </div>
@@ -525,8 +566,8 @@
                 <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
             </svg>
         </div>
-        <img class="bglateral right" src="../assets/homem quants.webp" alt="">
-        <img class="bglateral left" src="../assets/mulher quants.webp" alt="">
+        <img loading="lazy" class="bglateral right" src="../assets/homem quants.webp" alt="">
+        <img loading="lazy" class="bglateral left" src="../assets/mulher quants.webp" alt="">
     </section>
 
     <section id="comece">    
@@ -586,6 +627,7 @@
           <button class="closeModalRobo" id="closeModalRobo">&times;</button>
           <header>
             <h2 id="modalTitle"></h2>
+            <span class="miniindice">Mini Índice Ibovespa</span>
           </header>
 
           <div class="cards">
@@ -636,7 +678,7 @@
             <div class="content">
                 <p>Todos direitos reservados © 2025 Quants Capital</p>
                 <h2>Antes de investir, certifique-se dos riscos e se o investimento faz sentido para o seu perfil de investidor. Não existe garantia de retornos. Investimentos envolvem riscos e, mesmo com uma grande perspectiva de lucros, podem causar perdas ao investidor. Por isso, retornos passados não são garantia de retornos futuros.</h2>  
-                <a href="./politicadeprivacidade/index.html">Politica de Privacidade</a>
+                <a href="../politicadeprivacidade/index.html">Politica de Privacidade</a>
             </div>
         </div>
     </footer>
@@ -645,13 +687,17 @@
         <div class="modal">
             <span class="close-modal" id="closeModal">&times;</span>
             <header>
-                <span class="span">FINALIZE SUA COMPRA</span>
-                <h2>Para finalizar a sua compra, insira os seguintes dados:</h2>
+                <span class="span">JÁ ENTRAREMOS EM CONTATO!</span>
+                <h2>Para adiantar o seu atendimento, insira algumas informações:</h2>
             </header>
 
             <div role="main" id="quants-prepopulado-6fafab484f5fa0d4b38b"></div><script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script><script type="text/javascript"> new RDStationForms('quants-prepopulado-6fafab484f5fa0d4b38b', 'null').createForm();</script>
         </div>
     </div>
+
+    <a class="btn-whatsapp-pulse openModalForm">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+    </a>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXF34HD5"
@@ -668,7 +714,8 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="../script.js?v=3.0"></script>
+    <script src="../script.js?v=5"></script>
+    <script src="../events.js"></script>
 
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
     <script>

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let formSource = null; // Para armazenar de onde o formulário foi aberto
+    let formOpened = false; // Para identificar se o formulário foi aberto
 
     // Função para gerar um ID único para cada evento (para desduplicação)
     function generateEventId() {
@@ -64,38 +64,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Captura o clique nos botões que abrem o formulário de Consultor
-    document.querySelectorAll(".openModalForm").forEach(button => {
-        button.addEventListener("click", (event) => {
-            formSource = "consultor"; // Define a origem do formulário
-            sendEvent("Abriu formulário - Consultor");
+    // Captura o clique em qualquer botão que abre o formulário de contato
+    document.querySelectorAll(".openModalForm, .btn-whatsapp-pulse").forEach(button => {
+        button.addEventListener("click", () => {
+            formOpened = true; // Define que o formulário foi aberto
+            sendEvent("Abriu formulário de contato");
         });
     });
 
-    // Captura o clique no botão do WhatsApp que abre o formulário
-    const whatsappButton = document.querySelector(".btn-whatsapp-pulse");
-    if (whatsappButton) {
-        whatsappButton.addEventListener("click", () => {
-            formSource = "whatsapp"; // Define a origem do formulário
-            sendEvent("Abriu formulário - Botão Whatsapp");
-        });
-    }
-
-    // Captura o envio do formulário RD Station
+    // Captura o envio do formulário RD Station e verifica a validação antes de enviar o evento
     document.addEventListener("submit", function (event) {
         const form = event.target;
-        
-        // Verifica se o formulário pertence ao RD Station
-        if (form.closest("#quants-prepopulado-6fafab484f5fa0d4b38b")) {
-            console.log("Formulário RD enviado!");
 
-            if (formSource === "consultor") {
-                sendEvent("Enviou Formulario - Consultor");
-            } else if (formSource === "whatsapp") {
-                sendEvent("Enviou Formulario - Botão Whatsapp");
+        // Verifica se o formulário pertence ao RD Station
+        if (form.closest("#quants-prepopulado-6fafab484f5fa0d4b38b") && formOpened) {
+            // 🔥 Verifica se o formulário é válido antes de enviar o evento
+            if (!form.checkValidity()) {
+                console.log("Formulário inválido. Evento não enviado.");
+                return; // 🔥 Se o formulário não for válido, o evento NÃO será enviado
             }
 
-            formSource = null; // Resetar após envio
+            console.log("Formulário de contato enviado!");
+            sendEvent("Enviou formulário de contato");
+            formOpened = false; // Resetar após envio
         }
     }, true); // Usa `true` para capturar o evento na fase de captura
 });
