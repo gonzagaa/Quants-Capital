@@ -122,7 +122,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
 
                 // Define o link de redirecionamento com base no botão que abriu o modal
                 if (redirectType === 'whatsapp') {
-                    redirectLink = 'https://wa.link/tici03';
+                    redirectLink = 'https://wa.link/lbr0wf';
                 } else {
                     redirectLink = 'https://lp.quantscapital.com.br/obrigado-contato';
                 }
